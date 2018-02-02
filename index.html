@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>倒计时</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			body{
+				background-color: rgb(0,153,204);
+			}
+			#p1{ 
+				border:double 30px green;
+				width:80%;
+				height:100px;
+				margin:0 auto;
+			    text-align:center;
+			    border-image: url("2.jpg") 15 round;
+			    line-height: 50px;
+			    font-size:0.8rem;
+			    font-weight: 900;
+			}
+			#p2{
+				text-align: center;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="p1"></h1>
+		<p id="p2">现在还在等吗!!!</p>
+	</body>
+	<script type="text/javascript">
+		var time1=setInterval(time,150);
+		alert("请添加您的出生年月");
+		var chushengnian = prompt("年份");
+		var chushengyue = prompt("月份");
+		var chushengri = prompt("日");
+		if (chushengnian.value||chushengyue.value||chushengri.value == " ") {
+//			for () {
+//				
+//			}
+//			
+//		}else{
+			time();
+		}
+		function time(){
+			var a = new Date(chushengnian,chushengyue,chushengri);
+			var b = new Date();
+			var c = a.getTime();
+			var d = b.getTime();
+			var e = d-c;
+			var f = parseInt(e/(24*60*60*1000));
+			var g = parseInt(e/(60*60*1000)%24);
+			var h = parseInt(e/(60*1000)%60);
+			var j = parseInt(e/1000)-f*24*60*60-g*60*60-h*60;
+			var l = parseInt(e)%1000;
+			 //毫秒前面加 0
+//	        if (l>99&&l<100){
+//	        	l="0"+l
+//	        }
+//	        else if(l>9&&l<=99){
+//	        	l="0"+l
+//	        }
+//	        else if(l>0&&l<=9){
+//	        	l="00"+l
+//	        }
+//	        //秒前面加 0
+//	        if(j<=9){
+//	        	j="0"+j
+//	        }
+//	        //分钟前面加 0
+//	        if(h<=9){
+//	        	h="0"+h
+//	        }
+//	        //小时前面加 0
+//	        if(g<=9){
+//	        	g="0"+g
+//	        }
+//	        //天前面加 0
+//	        
+//	        if(f>9&&f<=99){
+//	        	f="0"+f
+//	        }
+//	        	
+//	        
+//	        else if(f>0&&f<=9){
+//	        	f="00"+f
+//	        }
+			if(j%2==0){
+				var R = Math.round(Math.random()*255);
+				var G = Math.round(Math.random()*255);
+				var B = Math.round(Math.random()*255);
+//				document.getElementById('p1').style.backgroundColor='rgb('+R+','+G+','+B+')';
+			}
+			document.getElementById('p1').style.color='rgb('+B+','+R+','+G+')';
+			document.getElementById('p2').style.color='rgb('+B+10+','+R+10+','+G+')';
+		document.getElementById('p1').innerHTML=("现在距离"+chushengnian+"年"+chushengyue+"月"+chushengri+"日中午12点已经过去"+f+"天"+g+"时"+h+"分"+j+"秒"+l+"毫秒");
+		}
+		
+	</script>
+</html>
