@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
-		<title>倒计时</title>
+		<title>你的光阴还有吗？？？</title>
 		<style type="text/css">
 			*{
 				margin:0;
@@ -42,12 +42,11 @@
 		<div id="p1">
 			<p id="ju"></p>
 			<p id="huo"></p>
-		</div>
-		
-		<p id="p2">现在还在等吗!!!</p>
+		</div><br />
+		<p id="p2">没有什么比时间更具有说服力了，因为时间无需通知我们就可以改变一切。</p><br />
+		<h5 style="color: #00ff00; text-align: center;">昨天唤不回来，明天还不确实，你能确有把握的就是今天。 加油！！！</h5><br />
 		<div class="WeChat">
-			<h1>微信扫一扫</h1>
-			<p >关注微信公众号，只要你就好</p>
+			<h4 style="color: red;">微信公众号，只要有你就好</h4><br />
 			<img src="1.jpg"/>
 		</div>
 	</body>
@@ -57,14 +56,26 @@
 		var chushengnian = prompt("年份");
 		var chushengyue = prompt("月份");
 		var chushengri = prompt("日");
-		if (chushengnian.value||chushengyue.value||chushengri.value == " ") {
-//			for () {
-//				
-//			}
-//			
+//		var pp = "123";
+//		if () {
+//			 time();
 //		}else{
-			time();
-		}
+//			alert("输入正确的年份（只用填入正确的数字）");
+//			continue;
+//		}
+//		if ("1950" < chushengnian > "2018")
+//		  {
+//		let chushengyue = prompt("月份");
+//		  }
+//		else if ("1" < chushengyue > "12")
+//		  {
+//		let chushengri = prompt("日");
+//		  }
+//		else if ("1" < chushengri > "31")
+//		  {
+//		 time();
+//		  }
+//		time();
 		function time(){
 			var a = new Date(chushengnian,chushengyue,chushengri);
 			var b = new Date();
